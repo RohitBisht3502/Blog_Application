@@ -19,6 +19,7 @@ public class Post {
     private String postContent;
     private String postCaption;
     private String postLocation;
+    @Enumerated(EnumType.STRING)
     private PostType postType;
 
     private LocalDateTime postCreatedTimeStamp;

@@ -3,6 +3,7 @@ package com.geekster.BloggingAPI.controller;
 import com.geekster.BloggingAPI.model.Post;
 import com.geekster.BloggingAPI.model.User;
 import com.geekster.BloggingAPI.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("signUp")
-    public String userSignUp(@RequestBody User user){
+    public String userSignUp(@Valid @RequestBody User user){
         return userService.userSignUp(user);
     }
 
